@@ -35,7 +35,7 @@
     "aws-sdk": "^2.1111.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
-    "cryptosea-api": "file:../libs/cryptosea-api",
+    "@cryptosea/api": "^0.0.1",
     "graphql": "^16.3.0",
     "graphql-upload": "^13.0.0",
     "joi": "^17.6.0",
