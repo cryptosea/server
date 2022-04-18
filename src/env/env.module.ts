@@ -18,11 +18,6 @@ export class EnvModule {
     {
       /* ********* CAN BE MODIFIED *********** */
       env: '.env.',
-      DB_HOST_: '',
-      DB_PORT_: '',
-      DB_USERNAME_: '',
-      DB_PASSWORD_: '',
-      DB_NAME_: '',
       SECRET_KEY_: '',
       AWS_BUCKET_NAME_: '',
       AWS_ACCESS_KEY_: '',

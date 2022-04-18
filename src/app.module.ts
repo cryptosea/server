@@ -13,11 +13,17 @@ import { MfsModule } from './mfs/mfs.module';
     MfsModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: _.envs.DB_HOST_,
-      port: ~~_.envs.DB_PORT_,
-      username: _.envs.DB_USERNAME_,
-      password: _.envs.DB_PASSWORD_,
-      database: _.envs.DB_NAME_,
+
+      ...(process.env.DATABASE_URL
+        ? { url: process.env.DATABASE_URL }
+        : {
+            host: process.env.DB_HOST,
+            port: ~~process.env.DB_PORT,
+            username: process.env.DB_USERNAME,
+            password: process.env.DB_PASSWORD,
+            database: process.env.DB_NAME,
+          }),
+
       synchronize: _.MODE !== 'production',
       logging: _.MODE !== 'production',
       autoLoadEntities: true,
