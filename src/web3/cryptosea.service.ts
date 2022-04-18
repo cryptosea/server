@@ -4,7 +4,7 @@ import { AsyncTryCatch } from 'src/common/decorators/trycatch.decorator';
 import { Result } from 'src/common/types/result.type';
 import { Err, Ok, unwrap } from 'src/common/functions/result.function';
 import { Eth } from 'web3-eth';
-import * as CAPI from 'cryptosea-api';
+import * as CAPI from '@cryptosea/api';
 import { EnvService } from 'src/env/env.service';
 import { Repository } from 'typeorm/repository/Repository';
 import { Metadata } from 'src/nft/entities/metadata.entity';
