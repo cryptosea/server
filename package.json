@@ -14,7 +14,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "ngrok": "ngrok http 8000",
-    "start": "cross-env NODE_ENV=prod nest start",
+    "start": "cross-env NODE_ENV=production nest start",
     "start:dev": "cross-env NODE_ENV=dev nest start --watch",
     "start:dev:nowatch": "cross-env NODE_ENV=dev nest start",
     "start:debug": "nest start --debug --watch",

@@ -9,7 +9,10 @@ import * as Joi from 'joi';
 @Global()
 @Module({})
 export class EnvModule {
-  static readonly MODE = getMode({ strict: true });
+  static readonly MODE = getMode({
+    list: ['dev', 'test', 'production'],
+    strict: true,
+  });
   static readonly config = joinMode(EnvModule.MODE, {
     /* ********* CAN BE MODIFIED *********** */
     env: '.env.',
@@ -43,7 +46,7 @@ export class EnvModule {
     const configModule = ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: config.env,
-      ignoreEnvFile: config.__MODE__ === 'prod',
+      ignoreEnvFile: config.__MODE__ === 'production',
       validationSchema: Joi.object({
         /** TODO */
       }),
